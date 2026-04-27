@@ -1,4 +1,4 @@
-# HA Im Home — Mac Daemon
+# HA Im Home — Mac Daemon (Agent)
 
 A lightweight macOS daemon that acts as a BLE (Bluetooth Low Energy) bridge between your iPhone and Home Assistant.
 
@@ -7,7 +7,7 @@ A lightweight macOS daemon that acts as a BLE (Bluetooth Low Energy) bridge betw
 iPhone (HA Im Home app)
 └─ detects arrival via GPS + elevator pressure drop
 └─ connects via BLE
-└─ Mac Mini daemon verifies HMAC signature
+└─ MacOS daemon verifies HMAC signature
 └─ notifies Home Assistant webhook
 ```
 
@@ -22,8 +22,8 @@ iPhone (HA Im Home app)
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/ha-im-home-daemon
-cd ha-im-home-daemon
+git clone https://github.com/ab19117814/ha-im-home-mac
+cd ha-im-home-mac
 
 # 2. Build
 swiftc imhomed.swift -o imhomed
@@ -35,7 +35,7 @@ sudo ./install.sh
 ```
 
 The installer will:
-- Ask for your HA URL and token
+- Ask for your Home Assistant URL and Long-lived access tokens
 - Copy the binary to `/Library/Application Support/ImHome/`
 - Register a LaunchAgent so the daemon starts automatically on login
 
