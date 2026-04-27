@@ -3,11 +3,13 @@
 A lightweight macOS daemon that acts as a BLE (Bluetooth Low Energy) bridge between your iPhone and Home Assistant.
 
 ## How It Works
+```
 iPhone (HA Im Home app)
 └─ detects arrival via GPS + elevator pressure drop
 └─ connects via BLE
 └─ Mac Mini daemon verifies HMAC signature
 └─ notifies Home Assistant webhook
+```
 
 ## Requirements
 
