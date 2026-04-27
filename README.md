@@ -26,7 +26,7 @@ git clone https://github.com/ab19117814/ha-im-home-mac
 cd ha-im-home-mac
 
 # 2. Build
-swiftc imhomed.swift -o imhomed
+swiftc main.swift -o imhomed
 # or open in Xcode and Archive
 
 # 3. Install
